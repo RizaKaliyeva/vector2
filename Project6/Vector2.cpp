@@ -77,3 +77,47 @@ bool Vector:: operator==(Vector obj) {
 	}
 	return true;
 }
+
+ostream& operator<<(ostream& os, Vector v) {
+	for (int i = 0; i < v.size(); i++)
+	{
+		os << v[i] << "\t";
+		return os;
+	}
+}
+
+ifstream& operator>>(ifstream& os, Vector v) {
+	for (int i = 0; i < v.size(); i++)
+	{
+		os >> v[i];
+		return os;
+	}
+}
+
+void Vector::operator+(const Vector &obj) {
+	for (int i = 0; i < size(); i++)
+	{
+		els[i] += obj.els[i];
+	}
+}
+
+void Vector::operator-(const Vector &obj) {
+	for (int i = 0; i < size(); i++)
+	{
+		els[i] -= obj.els[i];
+	}
+}
+
+bool Vector:: operator!=(Vector obj) {
+	if (size() != obj.size())
+		return true;
+	else
+	{
+		for (int i = 0; i < size(); i++)
+		{
+			if (els[i] != obj.els[i])
+				return true;
+		}
+	}
+	return false;
+}

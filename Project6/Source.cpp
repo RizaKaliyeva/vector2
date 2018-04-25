@@ -14,20 +14,27 @@ int main()
 	cout << "\n\n";
 	v[0] = 1.8;
 	v.at(1) = 5.4;
-	for (int i = 0; i < v.size(); i++)
-		cout << v[i] << endl;
+	
+		cout << v << endl;
 	
 	cout << "Vector v2" << endl;
 	Vector v2(v), v1;
-	for (int i = 0; i < v2.size(); i++)
-		cout << v2[i] << endl;
+	
+		cout << v2 << endl;
 
 	v1 = v;
-	for (int i = 0; i < v1.size(); i++)
-		cout << v1[i] << endl;
+	
+		cout << v1<< endl;
 	v1.push_back(15);
 
 	cout << (v1 == v) << endl;
+
+	v + v1;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << v[i] << endl;
+	}
+
 	system("pause");
 	return 0;
 }

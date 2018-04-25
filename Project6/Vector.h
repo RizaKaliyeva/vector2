@@ -1,5 +1,6 @@
 #pragma once
-
+#include <iostream>
+using namespace std;
 class Vector {
 private:
 	int cur_size;
@@ -26,4 +27,12 @@ public:
 
 	~Vector() { delete[]els; }
 
+	friend ostream& operator<<(ostream& os, Vector v);
+
+	void Vector::operator+(const Vector &obj);
+
+	void Vector::operator-(const Vector &obj);
+	bool Vector:: operator!=(Vector obj);
+
+	friend ifstream& operator>>(ifstream& os, Vector v);
 };
