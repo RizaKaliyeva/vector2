@@ -34,5 +34,5 @@ public:
 	void Vector::operator-(const Vector &obj);
 	bool Vector:: operator!=(Vector obj);
 
-	friend ifstream& operator>>(ifstream& os, Vector v);
+	friend istream& operator>>(istream& os, Vector v);
 };
